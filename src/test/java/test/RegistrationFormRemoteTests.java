@@ -7,7 +7,6 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.components.RegistrationPage;
 
 import java.util.Map;
 
@@ -112,7 +111,7 @@ public class RegistrationFormRemoteTests {
             $("#lastName").setValue("Savina");
             $("#userEmail").setValue("olga@savina.com");
             $("[for='gender-radio-2']").click();
-            $("#userNumber").setValue("777");
+            $("#userNumber").setValue("7777777777");
             $("#dateOfBirthInput").click();
             $(".react-datepicker__year-select").selectOption("2023");
             $(".react-datepicker__month-select").selectOption("October");
