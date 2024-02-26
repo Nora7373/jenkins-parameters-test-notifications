@@ -29,6 +29,7 @@ public class RegistrationPage {
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+        executeJavaScript("$('.fc-cta-consent').click()");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");

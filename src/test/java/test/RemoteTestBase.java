@@ -1,4 +1,5 @@
 package test;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -10,8 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-
-public class TestBase {
+public class RemoteTestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = System.getProperty("baseUrl","https://demoqa.com");
@@ -38,4 +38,5 @@ public class TestBase {
         Attach.addVideo();
         Selenide.closeWebDriver();
     }
+
 }

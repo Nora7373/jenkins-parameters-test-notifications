@@ -8,7 +8,8 @@ repositories {
 }
 
 def allureVersion = "2.21.0",
-    selenideVersion = "6.19.1"
+    selenideVersion = "6.19.1",
+    allureSelenide = "2.25.0"
 
 allure {
     report {
@@ -28,9 +29,10 @@ compileTestJava.options.encoding = "UTF-8"
 
 dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter:5.10.1"
-    testImplementation "io.qameta.allure:allure-selenide:2.25.0"
+    testImplementation "io.qameta.allure:allure-selenide:${allureSelenide}"
     testImplementation "com.codeborne:selenide:${selenideVersion}"
     testImplementation "org.slf4j:slf4j-simple:2.0.7"
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 
